@@ -139,7 +139,7 @@ elif s == "Model2":
         return prediction
 
 
-    model = tf.keras.models.load_model("model_VGG16 (2)-2.hdf5")
+    model = tf.keras.models.load_model("model_VGG16.hdf5")
     st.title("Artificial Intelligence Based Disaster Management System")
     st.header("DISASTER DAMAGE DETECTION")
 
