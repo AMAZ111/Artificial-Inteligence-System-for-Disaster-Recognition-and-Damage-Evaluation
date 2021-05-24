@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import cv2 as cv
+import opencv_python as cv
 import tempfile  as tfl
 
 import tensorflow as tf
