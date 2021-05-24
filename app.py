@@ -10,7 +10,8 @@ import tensorflow.keras as keras
 from PIL import Image, ImageOps
 
 st.markdown('<style>body{background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");background-size: cover;color:white;}</style>',unsafe_allow_html=True)
-
+model = tf.keras.models.load_model("model_hdf5_one (1).hdf5")
+model2 = tf.keras.models.load_model("model_VGG16 (2)-2.hdf5")
 s = st.selectbox("Plz Choose Model", ("Model1", "Model2", "Sat Image"))
 if s == "Model1":
 
@@ -33,7 +34,7 @@ if s == "Model1":
     
         return prediction
 
-    model = tf.keras.models.load_model("model_hdf5_one (1).hdf5")
+    
 
     st.title("Artificial Intelligence Based Disaster Management System")
 
@@ -139,7 +140,7 @@ elif s == "Model2":
         return prediction
 
 
-    model = tf.keras.models.load_model("model_VGG16 (2)-2.hdf5")
+
     st.title("Artificial Intelligence Based Disaster Management System")
     st.header("DISASTER DAMAGE DETECTION")
 
@@ -157,7 +158,7 @@ elif s == "Model2":
         st.image(image1, use_column_width=True)
         st.image(image2, use_column_width=True)
 
-        prediction = import_and_predict(image1,image2, model)
+        prediction = import_and_predict(image1,image2, model2)
         st.write(prediction)
         
 elif s == "Sat Img":
