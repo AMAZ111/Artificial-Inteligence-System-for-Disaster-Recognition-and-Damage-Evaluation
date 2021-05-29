@@ -116,6 +116,7 @@ if s == "Model1":
 # ssh_url=ngrok.connect(22,'tcp')
 # print(public_url)
 elif s == "Model2":
+    st.write("To be Fixed")
     
         
 elif s == "Sat Img":
