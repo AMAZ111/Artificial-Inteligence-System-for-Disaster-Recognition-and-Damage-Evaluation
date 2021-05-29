@@ -33,7 +33,7 @@ if s == "Model1":
     
         return prediction
 
-    model = tf.keras.models.load_model("model_hdf5_one (1).hdf5")
+    model = tf.keras.models.load_model("Four_Way_Model.hdf5")
 
     st.title("Artificial Intelligence Based Disaster Management System")
 
@@ -116,6 +116,9 @@ if s == "Model1":
 # ssh_url=ngrok.connect(22,'tcp')
 # print(public_url)
 elif s == "Model2":
+    
+        
+elif s == "Sat Img":
     def import_and_predict(image_data1,image_data2,model):
 
         size = (224, 224)
@@ -139,7 +142,7 @@ elif s == "Model2":
         return prediction
 
 
-    model = tf.keras.models.load_model("model_VGG16.hdf5")
+    model = tf.keras.models.load_model("Damage_Evaluation_Model.hdf5")
     st.title("Artificial Intelligence Based Disaster Management System")
     st.header("DISASTER DAMAGE DETECTION")
 
@@ -159,8 +162,5 @@ elif s == "Model2":
 
         prediction = import_and_predict(image1,image2, model)
         st.write(prediction)
-        
-elif s == "Sat Img":
-    st.write("Comming soon")
 else:
     st.write("Invalid Input")
