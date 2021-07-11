@@ -32,7 +32,7 @@ def import_and_predict(image_data, model):
     
     return prediction
 
-model = tf.keras.models.load_model("/Users/akshatjain/Desktop/CapstoneProject/DisasterCapstone8Classes/model_vgg16.hdf5")
+model = tf.keras.models.load_model("model_eight_way.hdf5")
 
 st.title("Artificial Intelligence Based Disaster Management System with 8 Classes")
 
